@@ -1,0 +1,17 @@
+﻿.minbild {
+    height: 400px;
+    width: 600px;
+    border: 20px;
+    border-color: black;
+    border-style: solid;
+    border-top: 30px;
+    border-top-color: blue;
+    border-top-style: solid;
+    border-left: 100px;
+    border-left-color: blueviolet;
+    border-left-style:solid;
+    border-right: 60px solid cyan;
+    padding: 50px;
+    margin: 50px;
+    border-radius: 75px;
+}

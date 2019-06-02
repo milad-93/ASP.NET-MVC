@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = "~/Views/Shared/MenuView.cshtml";
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="~/Css/FirstPagePictureDesign.css" rel="stylesheet" />
+
+
+<h1>@ViewBag.welcome</h1>
+
+
+<center>
+    <p id="erbjudande" style="border-bottom-color: black; font-size: 30px; font-style: italic">I våra fräscha lokaler utförs service med kvalité<a href="/BilarLagrade/LagraBil">- Checka in din bil idag</a></p>
+    <img src="~/Picture/bilar.jpg" class="minbild">
+</center>
+
+
+
+
+
+
+
+
+
+<footer>
+    milad copyright
+
+</footer>
+
+
+
+
+
+
+
+<script> // ett javascript taget ifrån w3 schools.
+    $(document).ready(function () {
+        $("#erbjudande").mousedown(function () {
+            alert("checka in bilen idag! och få 20% rabatt på din service!");
+            window.location.replace("/BilarLagrade/LagraBil");
+        });
+    });
+</script>

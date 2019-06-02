@@ -1,0 +1,32 @@
+﻿@model WebbsidaExam.User 
+@{
+    Layout = "~/Views/Shared/MenuView.cshtml";
+}
+<link href="~/Css/RegSign.css" rel="stylesheet" /> 
+
+
+
+
+
+
+@using (Html.BeginForm())
+{  // har en css stillmall kopplad till denna
+
+    <div class="container">
+        <h1>Registrera dig</h1>
+        <hr>
+
+        Användarnamn
+        @Html.EditorFor(m => Model.Username)
+        Email
+        @Html.EditorFor(m => Model.Email)
+        Lösenord
+        @Html.PasswordFor(m => Model.Password)
+
+
+        <button type="submit" name="register_btn" class="register_btn">Skapa ett konto</button>
+    </div>
+
+}
+
+

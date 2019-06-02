@@ -1,0 +1,44 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Css/MenuStyle.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div>
+        <div class="navbar">
+            <a href="/Home/Index">Hem</a>
+            <a href="/BilarLagrade/LagraBil">Checka in din bil - Privatkund</a>
+            <a href="/Admin/Register">Registrera - Personal</a>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Personal
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Admin/VisaUppLagradBil">Se registrerade bilar (inloggning krävs)</a>
+                    @if (User.Identity.IsAuthenticated) // jag kollar beroende på om jag e inloggad eller utloggad visas detta
+                    {
+                        <a href="/Admin/Logout">Logga ut</a>
+                    }
+                    else
+                    {
+                        <a href="/Admin/Login">Logga in</a>
+                    }
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    
+
+
+    @RenderBody()
+</body>
+</html>

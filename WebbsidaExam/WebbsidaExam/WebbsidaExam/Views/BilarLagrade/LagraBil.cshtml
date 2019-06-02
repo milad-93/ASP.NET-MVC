@@ -1,0 +1,35 @@
+﻿@model WebbsidaExam.CheckaInBil
+@{
+    Layout = "~/Views/Shared/MenuView.cshtml";
+}
+<link href="~/Css/RegSign.css" rel="stylesheet" />
+
+
+
+
+
+@using (Html.BeginForm())
+{  // har ju en css stillmall kopplad till denna
+
+    <div class="container">
+    <h1>Checka in bilen för service</h1>
+    <hr>
+
+                 RegNr
+                 @Html.EditorFor(m => Model.RegNr)
+                 Märke
+                 @Html.EditorFor(m => Model.Marke)
+                 Modell
+                 @Html.EditorFor(m => Model.Modell)
+                 Växellåda
+                 @Html.EditorFor(m => Model.Vaxellada)
+                 Miltal
+                 @Html.EditorFor(m => Model.Miltal)
+                 Kostnad
+                 @Html.EditorFor(m => Model.Kostnad)
+                <button type="submit" name="register_btn" class="register_btn">Checka in för service!</button>
+    </div>
+
+}
+
+

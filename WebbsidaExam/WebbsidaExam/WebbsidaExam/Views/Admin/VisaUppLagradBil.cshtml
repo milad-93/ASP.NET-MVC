@@ -1,0 +1,33 @@
+﻿@model List<WebbsidaExam.CheckaInBil>
+@{
+    Layout = "~/Views/Shared/MenuView.cshtml";
+}
+<link href="~/Css/ShowCarTable.css" rel="stylesheet" />
+
+
+
+<table>
+    <tr>
+        <th>RegNr</th>
+        <th>Märke</th>
+        <th>Modell</th>
+        <th>Växellåda</th>
+        <th>Miltal</th>
+        <th>Kostnad</th>
+    </tr>
+
+    @foreach (var item in Model)//varje rad i modellen som kommer heta item och skriva ut den varje tabell rad ligger i foraech loop
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.RegNr)</td>
+            <td>@Html.DisplayFor(modelItem => item.Marke)</td>
+            <td>@Html.DisplayFor(modelItem => item.Modell)</td>
+            <td>@Html.DisplayFor(modelItem => item.Vaxellada)</td>
+            <td>@Html.DisplayFor(modelItem => item.Miltal)</td>
+            <td>@Html.DisplayFor(modelItem => item.Kostnad)</td>
+        </tr>
+        // referreingen i model till projektet sen till tabbelen checka in bil!
+    }
+
+</table>
+
